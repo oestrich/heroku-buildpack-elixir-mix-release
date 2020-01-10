@@ -10,3 +10,7 @@ echo -n $app_name > _build/elixir-mix-release-buildpack-app-name
 echo "-----> Building release for $app_name"
 mix release --overwrite
 
+build=$(cd "$1/" && pwd)
+
+mkdir -p $build/.profile.d
+echo "PATH=\$PATH:${HOME}/_build/prod/rel/${app_name}/bin" > $build/.profile.d/elixir_release_buildpack_paths.sh

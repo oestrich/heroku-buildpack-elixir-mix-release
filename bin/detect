@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -d "$1/rel" ];
+if [ -f "$1/mix.exs" ];
 then
   echo "Elixir Mix Release"
   exit 0

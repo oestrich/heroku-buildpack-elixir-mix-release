@@ -8,5 +8,5 @@ cat <<EOF
 addons:
   []
 default_process_types:
-  web: _build/prod/rel/${app_name}/bin/${app_name} start
+  web: ${app_name} start
 EOF
